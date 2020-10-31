@@ -9,3 +9,5 @@ Redux Basics
   ![Screenshot](redux_part7.png)
   ![Screenshot](redux_part8.png)
   ![Screenshot](redux_summary.png)
+  ![Screenshot](redux_concept.png)
+  ![Screenshot](redux_concept_part2.png)
