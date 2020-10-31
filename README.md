@@ -21,3 +21,10 @@ Redux Basics
   ![Screenshot](redux_action.png)
   ![Screenshot](redux_reducer.png)
   ![Screenshot](redux_principles.png)
+
+  Actions(Action is an object with a type property. And action creator is a function
+  which returns an action)
+
+  ![Screenshot](tut5_action.png)
+  ![Screenshot](tut5_action_part2.png)
+  
