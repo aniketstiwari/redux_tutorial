@@ -11,7 +11,7 @@ function bycake() {
     }
 }
 
-//Reducer
+//Reducerasasd
 // (previousState, action) => newState
 
 const InitialState = {
