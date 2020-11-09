@@ -45,3 +45,7 @@ Redux Basics
   ![Screenshot](async_action3.png)
   ![Screenshot](async_action4.png)
   
+
+  Redux Thunk Middleware
+
+  ![Screenshot](redux_thunk.png)
