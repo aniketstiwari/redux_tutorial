@@ -29,3 +29,7 @@ Redux Basics
   Reducers
 
   ![Screenshot](tut6_reducer.png)
+
+  Store
+
+  ![Screenshot](redux_store_new.png)

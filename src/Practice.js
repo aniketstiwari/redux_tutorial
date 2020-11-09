@@ -1,3 +1,5 @@
+const redux = require('redux')
+const createStore = redux.createStore
 
 const BUY_CAKE = "BUY_CAKE";
 
@@ -11,7 +13,7 @@ function bycake() {
     }
 }
 
-//Reducerasasd
+//Reducer
 // (previousState, action) => newState
 
 const InitialState = {
@@ -34,3 +36,21 @@ const reducer = (state = InitialState, action) => {
         default: return  state
     }
 }
+
+//Hold the application state
+const store = createStore(reducer)
+
+//Since till now we haven't perform any state transition getstate() should
+//return initial state
+console.log('Initial Stat',  store.getState())
+
+//Allow the app to subscribe the changes in the store that is achieve
+//using subscribe method
+
+const unsubscribe = store.subscribe(() => console.log("updated state", store.getState()) )
+
+//Accepts action as a parameter.As paramter we will invoke(call) the action created
+store.dispatch(bycake)
+store.dispatch(bycake)
+store.dispatch(bycake)
+unsubscribe()
