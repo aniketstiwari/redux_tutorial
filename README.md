@@ -37,3 +37,11 @@ Redux Basics
   MiddleWare
 
   ![Screenshot](middleware.png)
+
+  Async Actions
+
+  ![Screenshot](async_action.png)
+  ![Screenshot](async_action2.png)
+  ![Screenshot](async_action3.png)
+  ![Screenshot](async_action4.png)
+  
