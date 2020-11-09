@@ -33,3 +33,7 @@ Redux Basics
   Store
 
   ![Screenshot](redux_store_new.png)
+
+  MiddleWare
+
+  ![Screenshot](middleware.png)

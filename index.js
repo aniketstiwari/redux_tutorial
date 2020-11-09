@@ -1,6 +1,10 @@
 const redux = require('redux')
+const reduxLogger = require('redux-logger')
+
 const createStore = redux.createStore
 const combineReducers = redux.combineReducers
+const applyMiddleware = redux.applyMiddleware
+const logger = reduxLogger.createLogger()
 
 const BUY_CAKE = "BUY_CAKE";
 const BUY_ICECREAM = "BUY_ICECREAM"
@@ -88,7 +92,7 @@ const rootReducer = combineReducers({
     iceCream: iceCreamReducer
 })
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, applyMiddleware(logger))
 
 //Hold the application state
 //const store = createStore(reducer)
@@ -100,7 +104,8 @@ console.log('Initial Stat',  store.getState())
 //Allow the app to subscribe the changes in the store that is achieve
 //using subscribe method
 
-const unsubscribe = store.subscribe(() => console.log("updated state", store.getState()) )
+//const unsubscribe = store.subscribe(() => console.log("updated state", store.getState()) )
+const unsubscribe = store.subscribe(() => {} )
 
 //Accepts action as a parameter.As paramter we will invoke(call) the action created
 store.dispatch(bycake())
