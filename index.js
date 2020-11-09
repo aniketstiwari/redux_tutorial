@@ -24,28 +24,59 @@ function buyicecream() {
 //Reducer
 // (previousState, action) => newState
 
-const InitialState = {
-    numOfCakes: 10,
-    numOfIceCream: 20
+// const InitialState = {
+//     numOfCakes: 10,
+//     numOfIceCream: 20
+// }
+
+const InitialCakeState = {
+    numOfCakes: 10
 }
+
+const InitialIceCreamState = {
+    numOfIceCream: 10
+}
+
 //having singular reducer is very diffcult to manage
-const reducer = (state = InitialState, action) => {
+// const reducer = (state = InitialState, action) => {
+//     switch(action.type) {
+//         case BUY_CAKE: return {
+//             //In reality state object may contain more than one property that is why
+//             //it is always safer to create the copy of the state object and then change only
+//             // the properties that's needs to. To make a copy of state object we use
+//             // spread operator
+//             ...state,
+//             numOfCakes: state.numOfCakes - 1
+//         }
+//         case BUY_ICECREAM: return {
+//             ...state,
+//             numOfIceCream: state.numOfIceCream - 1
+//         }
+//         //For managing default state we return back the state
+//         //One important thing to note down here that we are not mutating the
+//         //state object
+//         default: return  state
+//     }
+// }
+
+
+const cakeReducer = (state = InitialCakeState, action) => {
     switch(action.type) {
-        case BUY_CAKE: return {
-            //In reality state object may contain more than one property that is why
-            //it is always safer to create the copy of the state object and then change only
-            // the properties that's needs to. To make a copy of state object we use
-            // spread operator
+        case BUY_CAKE: return { 
             ...state,
             numOfCakes: state.numOfCakes - 1
         }
-        case BUY_ICECREAM: return {
+        default: return  state
+    }
+}
+
+
+const iceCreamReducer = (state = InitialIceCreamState, action) => {
+    switch(action.type) {
+        case BUY_CAKE: return { 
             ...state,
             numOfIceCream: state.numOfIceCream - 1
         }
-        //For managing default state we return back the state
-        //One important thing to note down here that we are not mutating the
-        //state object
         default: return  state
     }
 }
