@@ -1,5 +1,6 @@
 const redux = require('redux')
 const createStore = redux.createStore
+const combineReducers = redux.combineReducers
 
 const BUY_CAKE = "BUY_CAKE";
 const BUY_ICECREAM = "BUY_ICECREAM"
@@ -81,8 +82,16 @@ const iceCreamReducer = (state = InitialIceCreamState, action) => {
     }
 }
 
+//the convention is to call all your reducer as the root reducer
+const rootReducer = combineReducers({
+    cake: cakeReducer,
+    iceCream: iceCreamReducer
+})
+
+const store = createStore(rootReducer)
+
 //Hold the application state
-const store = createStore(reducer)
+//const store = createStore(reducer)
 
 //Since till now we haven't perform any state transition getstate() should
 //return initial state
