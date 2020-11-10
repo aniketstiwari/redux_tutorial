@@ -1,6 +1,6 @@
 import React from 'react';
 
-function cakeContainer(props) {
+function CakeContainer(props) {
     return (
         <div>
             <h2>Number of cakes</h2>
@@ -9,4 +9,4 @@ function cakeContainer(props) {
     );
 }
 
-export default cakeContainer;
+export default CakeContainer;

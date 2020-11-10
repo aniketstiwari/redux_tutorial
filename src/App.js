@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import cakeContainer from './components/cakeContainer';
+import CakeContainer from './components/CakeContainer';
 
 function App() {
   return (
     <div className="App">
-      <cakeContainer/>
+      <CakeContainer/>
     </div>
   );
 }
