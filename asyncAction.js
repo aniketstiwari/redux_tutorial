@@ -84,5 +84,5 @@ const fetchUsers = () => {
 
 
 const store = createStore(reducer, applyMiddleWare(thunkMiddleware))
-store.subscribe(() => console.log(store.getState()))
+store.subscribe(() => { console.log(store.getState()) })
 store.dispatch(fetchUsers)
